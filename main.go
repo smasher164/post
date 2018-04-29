@@ -48,9 +48,11 @@ func main() {
 	if title == "" || date == "" || scanner.Err() != nil {
 		usage()
 	}
-	fmt.Printf("<h2><a href=%q>%s</a></h2>", path, title)
+	fmt.Print(`<div class="toc_post">`)
+	fmt.Printf("<h3><a href=%q>%s</a></h3>", path, title)
 	if desc != "" {
-		fmt.Printf("<h3>%s</h3>", desc)
+		fmt.Printf("<h4>%s</h4>", desc)
 	}
 	fmt.Printf("<h4>%s</h4>", date)
+	fmt.Print(`</div>`)
 }
