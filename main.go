@@ -50,9 +50,9 @@ func main() {
 	}
 	fmt.Print(`<div class="toc_post">`)
 	fmt.Printf("<h3><a href=%q>%s</a></h3>", path, title)
+	fmt.Printf("<h5>%s</h5>", date)
 	if desc != "" {
 		fmt.Printf("<h4>%s</h4>", desc)
 	}
-	fmt.Printf("<h4>%s</h4>", date)
 	fmt.Print(`</div>`)
 }
